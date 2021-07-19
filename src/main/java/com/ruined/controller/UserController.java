@@ -3,12 +3,10 @@ package com.ruined.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
-/**
- * @author BoomJs
- * @data 2021/7/19 17:05
- */
-@Controller
+
+@RestController
 public class UserController {
     @ResponseBody
     @RequestMapping("/test")
