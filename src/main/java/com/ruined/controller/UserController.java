@@ -11,7 +11,7 @@ public class UserController {
     @ResponseBody
     @RequestMapping("/test")
     public String test(){
-        System.out.println("success!");
+        System.out.println("success!!");
         return "success!";
     }
 }
