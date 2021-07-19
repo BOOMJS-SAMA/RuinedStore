@@ -8,6 +8,7 @@ class RuinedStoreApplicationTests {
 
     @Test
     void contextLoads() {
+
     }
 
 }
