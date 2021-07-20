@@ -1,5 +1,6 @@
 package com.ruined.store.controller;
 
+import com.ruined.store.entity.User;
 import com.ruined.store.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -37,10 +38,11 @@ public class UserController {
     }
     @ResponseBody
     @RequestMapping(value = "/loginIn" ,method = RequestMethod.POST)
-    public String loginIn(String username, String password, HttpServletResponse response){
-        Cookie cookie = new Cookie("username", username);
+    public String loginIn(User user, HttpServletResponse response){
+
+        Cookie cookie = new Cookie("username", user.getUsername());
         response.addCookie(cookie);
-        return userService.login(username,password);
+        return userService.login(user.getUsername(),user.getPassword());
     }
 //    @ResponseBody
 //    @RequestMapping(value = "/cookie")

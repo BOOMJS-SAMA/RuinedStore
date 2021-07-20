@@ -1,5 +1,6 @@
 package com.ruined.store.entity;
 
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 import lombok.ToString;
 
@@ -9,6 +10,7 @@ import lombok.ToString;
  */
 @Data
 @ToString
+@TableName(value = "ruin_user")
 public class User {
     private Long id;
     private String Username;
